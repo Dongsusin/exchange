@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>환율 계산기</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./exchange.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>환율 계산기</h1>
+      <div class="con">
+        <div class="currency">
+          <span class="currency-title">변환할 돈</span><br />
+          <select name="currency-one" id="currency-one"></select>
+          <input type="number" id="amount-one" value="1" />
+        </div>
+        <div class="currency">
+          <span class="currency-title">변경된 돈</span><br />
+          <select name="currency-two" id="currency-two"></select>
+          <input type="number" id="amount-two" readonly />
+        </div>
+        <button id="swap"><i class="fa-solid fa-right-left"></i></button>
+      </div>
+      <p id="rate">
+        <span class="currency-title">표시환율</span>
+        <strong id="displayCurrency"></strong>
+        <br />
+        <span>이용API출처:https://open.exchangerate-api.com/v6/latest</span>
+      </p>
+    </div>
+
+    <script src="./exchange.js"></script>
+  </body>
+</html>
